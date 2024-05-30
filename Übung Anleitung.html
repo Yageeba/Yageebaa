@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Rectangles</title>
+    
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #f5f8ff;
+        }
+
+        .horizontal {
+            background-color: #17967D; /* Farbe für das horizontale Rechteck */
+            width: 400px;
+            height: 200px;
+            border-radius: 20px; /* Abgerundete Ecken */
+            position: absolute;
+            opacity: 0.5; /* Opazität */
+            top: 60px; /* Abstand vom oberen Rand */
+            right: 20px; /* Abstand vom rechten Rand */
+        }
+
+        .vertical {
+            background-color: #007868; /* Farbe für das vertikale Rechteck */
+            width: 200px;
+            height: 400px;
+            border-radius: 20px; /* Abgerundete Ecken */
+            position: absolute;
+            opacity: 0.5; /* Opazität */
+            top: 120px; /* Abstand vom oberen Rand */
+            right: 50px; /* Abstand vom rechten Rand */
+        }
+    </style>
+</head>
+<body>
+    <div class="rectangle horizontal" id="horizontalRect"></div>
+    <div class="rectangle vertical" id="verticalRect"></div>
+
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var horizontalRect = document.getElementById("horizontalRect");
+    var verticalRect = document.getElementById("verticalRect");
+
+    // Setze die Startpositionen der Rechtecke außerhalb des sichtbaren Bereichs
+    horizontalRect.style.transform = "translateY(100vh)";
+    verticalRect.style.transform = "translateY(100vh)";
+
+    // Füge eine verzögerte Animation hinzu, um die Rechtecke von unten nach oben zu bewegen
+    setTimeout(function() {
+        horizontalRect.style.transition = "transform 1s ease";
+        verticalRect.style.transition = "transform 1s ease";
+
+        horizontalRect.style.transform = "translateY(0)";
+        verticalRect.style.transform = "translateY(0)";
+    }, 500); // Verzögere die Animation um 0,5 Sekunden
+});
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,706 @@
+*{
+    margin: 0;
+padding: 0;
+border: none;
+outline: none;
+box-sizing: border-box;
+font-family: 'Open Sans', sans-serif;
+}
+body{
+background-color: #f5f8ff;
+}
+
+.language-links {
+    text-align: left;
+    margin-right: -30px;
+    margin-top: 20px;
+}
+
+.objects{
+width: 90%;
+padding: 25px;
+margin-bottom: 20px;
+background-color: transparent;
+color: #214b46;
+z-index: 6;
+margin-top: 60px;
+            
+            margin-left: 60PX;
+
+}
+.show{
+    display: block;
+}
+.box {
+    width: 90%;
+    height: 180px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: blur;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(238, 14, 14, 0.1);
+    margin-left: 30px;
+    margin-top: 40px;
+}
+.btn{
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+}
+
+/* Stil für den Inhalt der Boxen */
+.box h2 {
+margin-bottom: 5px;
+}
+
+.box p {
+margin-bottom: 3px;}
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 110%;
+background-color: white; /* Hintergrundfarbe des Overlays */
+z-index: 1; /* Damit das Overlay hinter dem Text und dem Menü liegt */
+background-position: bottom;
+}
+
+
+.footer-info p {
+transition: color 0.3s ease;
+}
+
+.footer-info p:hover {
+color: #17967D; /* Ändern Sie die Farbe bei Hover */
+}
+
+li {
+list-style: none;
+}
+
+a {
+text-decoration: none;
+color: #aaaaaa;
+font-size: 1rem;
+z-index: 1; /* Stellen Sie sicher, dass der Text über dem Overlay liegt */
+position: relative; /* Damit die z-index-Eigenschaft funktioniert */
+}
+
+a:hover {
+color: #17967D;
+}
+
+header {
+position: relative;
+padding: 0 2rem;
+z-index: 3; /* Stellen Sie sicher, dass das Menü über dem Hintergrundbild und dem Overlay liegt */
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.language-links {
+    text-align: left;
+    margin-left: -1200px;
+}
+
+
+.navbar .logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007868;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 4rem;
+    font-size: 20px;
+    color: #1a1313;
+    margin-left: 850px;
+    
+}
+.language-links {
+    position: absolute;
+    top: 0;
+    right: 1400px;
+    margin-top: 20px; /* Optional: Füge einen vertikalen Abstand hinzu */
+    z-index: 2; /* Stelle sicher, dass die Sprachlinks über den anderen Links liegen */}
+
+    .navbar {
+        width: 100%;
+        height: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .navbar .logo a {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #007868;
+    }
+    
+    .navbar .links {
+        display: flex;
+        gap: 4rem;
+        font-size: 20px;
+        color: #1a1313;
+    }
+    
+    
+    .navbar .toggle-btn {
+        color: #1a1313;
+        font-size: 10rem;
+        cursor: pointer;
+        display: none;
+    }
+    
+    .action-btn {
+        background-color: #007868;
+        color: #ffffff;
+        padding: 0.5rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    
+    .action-btn:hover {
+        transform: scale(1.05);
+    }
+    
+    .action-btn:active {
+        transform: scale(0.95);
+    }
+    
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        right: 2rem;
+        top: 90px;
+        width: 400px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: height 0.2s ease;
+    }
+    
+    .dropdown-menu.open {
+        display: block;
+        height: auto;
+        width: 800px;
+    }
+
+
+    .dropdown-menu a {
+        color: #333; /* Standardfarbe des Textes */
+        text-decoration: none; /* Entfernt Unterstreichungen */
+    }
+    
+    /* CSS-Stil für den Text im Dropdown-Menü, wenn es angezeigt wird */
+    .dropdown-menu.open a {
+        color: #ffffff; /* Ändere die Farbe des Textes, wenn das Menü sichtbar ist */
+    }
+    
+    .dropdown-menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .dropdown-menu .action-btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+section#hero {
+height: calc(100vh - 60px);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: #ffffff;
+z-index: 1; /* Stellen Sie sicher, dass der Text über dem Overlay liegt */
+position: relative; /* Damit die z-index-Eigenschaft funktioniert */
+}
+.highlight-text h1 {
+background-color: #aaaaaa; /* Grauer Hintergrund */
+padding: 0.2em 0.5em; /* Etwas Abstand um den Text */
+border-radius: 5px; /* Abgerundete Ecken */
+text-align: left;
+}
+
+.highlight-text 
+
+#hero h1 {
+font-size: 2rem;
+margin-bottom: 1rem;
+text-align: left;
+}
+#hero h2{
+font-size: 2rem;
+margin-bottom: 1rem;  
+text-align: left; 
+}
+#hero a1{
+font-size: 2rem;
+margin-bottom: 1rem;
+text-align: left;
+
+}
+
+#hero b{
+font-size: 15px;
+margin-bottom: 10px;
+
+
+
+}
+.toggle-btn i {
+position: relative;
+z-index: 1; /* Stellen Sie sicher, dass das Symbol über dem Overlay liegt */
+
+}
+.navbar .toggle-btn {
+    color: #1a1313;
+    font-size: 10rem;
+    cursor: pointer;
+    display: none;
+}
+
+.toggle-btn {
+z-index: 2; /* Stellen Sie sicher, dass der Toggle-Button über dem Overlay liegt */
+}
+
+
+.wrapper{
+margin-top: 120px;
+z-index: 4;
+position: absolute;
+width: 95%;
+
+}
+
+
+
+
+.button-value{
+border: 2px solid #007868;
+padding: 1em 2.2em;
+border-radius: 3em;
+background-color: transparent;
+color: #17967D;
+cursor: pointer;
+margin-left: 10px;
+margin-top: 60px;
+            
+            margin-left: 60PX;
+
+}
+
+
+#buttons{
+
+margin-top: 60px;
+            
+            margin-left: 60PX;
+}
+
+.active{
+background-color: #17967D;
+color: #ffffff;
+}
+
+
+
+
+
+
+.footer-container {
+background-color: #17967D; /* Grün */
+color: #fff; /* Weißer Text */
+padding: 120px 0; /* Innenabstand oben/unten */
+text-align: center; /* Zentrierte Ausrichtung */
+transition: height 0.5s ease; /* Animation für Höhenänderung */
+max-height: 0;
+overflow: hidden;
+margin-top: 100px;
+z-index: 0;
+}
+
+.footer-links a {
+margin: 0 10px; /* Abstand zwischen den Links */
+text-decoration: none; /* Entfernen der Unterstreichung */
+color: #fff; /* Weißer Text */
+transition: color 0.3s ease; /* Farbübergangseffekt */
+}
+
+.footer-links a:hover {
+color: black; /* Farbänderung bei Hover */
+}
+
+.footer-info {
+margin-top: 20px; /* Abstand nach oben */
+font-size: 14px; /* Textgröße */
+}
+
+.footer-info p {
+margin: 5px 0; /* Abstand oben/unten */
+}
+
+.footer-info p i {
+margin-right: 5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .navbar .toggle-btn {
+        display: block;
+    }
+    .navbar .links {
+        display: none;
+    }
+}
+
+@media (min-width: 1201px) {
+    .navbar .toggle-btn {
+        display: none;
+    }
+    .navbar .links {
+        display: flex;
+    }
+}
+
+
+
+
+#category-buttons {
+    margin-bottom: 20px;
+}
+#category-buttons button {
+    border: 2px solid #007868;
+    padding: 1em 2.2em;
+    border-radius: 3em;
+    background-color: transparent;
+    color: #17967D;
+    cursor: pointer;
+    margin-left: 10px;
+}
+#category-buttons button.active {
+    border: 2px solid #007868;
+padding: 1em 2.2em;
+border-radius: 3em;
+background-color: transparent;
+color: #17967D;
+cursor: pointer;
+margin-left: 10px;
+margin-top: 60px;
+            
+            margin-left: 60PX;
+
+}
+/* Stil für die Listenelemente */
+#item-list {
+    list-style-type: none;
+    padding: 0;
+}
+#item-list li {
+    width: 90%;
+    height: 180px;
+   
+    margin-bottom: 200px;
+    background-color: blur;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 300px;
+    margin-top: 60px; 
+}
+#item-list li.show {
+    display: block; 
+   width: 95%;
+   height: 180px;
+   padding: 10px;
+   margin-bottom: 40px;
+   background-color: transparent;
+   border-radius: 11px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.053);
+   margin-left: 30px;
+   margin-top: 40px;
+}* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color:#007868;
+}
+.fruits{
+    color:#007868;
+}
+body {
+    height: 100vh;
+    background-color: #f5f8ff; /* Hintergrundfarbe setzen */
+    
+    background-size: cover; /* Bild auf die gesamte Seite skalieren */
+    background-position: center 1%; /* Bild zentriert, aber um 1% der Höhe des Bildschirms nach unten verschoben */
+    position: relative; /* Stellen Sie sicher, dass das überlappende Element relativ zum Body positioniert wird */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-color: white; /* Hintergrundfarbe des Overlays */
+    z-index: 0; /* Damit das Overlay hinter dem Text und dem Menü liegt */
+    background-position: bottom;
+}
+.overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bild1.jpg'); /* Bild 1 als Hintergrundbild verwenden */
+    background-size: cover;
+    opacity: 0.7; /* Deckkraft auf 50% setzen */
+    z-index: 0; /* Damit das Bild unter dem Text und dem Menü liegt */
+}
+
+.footer-info p {
+    transition: color 0.3s ease;
+}
+
+.footer-info p:hover {
+    color: #17967D; /* Ändern Sie die Farbe bei Hover */
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #aaaaaa;
+    font-size: 1rem;
+    z-index: 1; /* Stellen Sie sicher, dass der Text über dem Overlay liegt */
+    position: relative; /* Damit die z-index-Eigenschaft funktioniert */
+}
+
+a:hover {
+    color: #17967D;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+    z-index: 3; /* Stellen Sie sicher, dass das Menü über dem Hintergrundbild und dem Overlay liegt */
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007868;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 4rem;
+    font-size: 20px;
+    color: #1a1313;
+}
+
+
+.navbar .toggle-btn {
+    color: #1a1313;
+    font-size: 10rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action-btn {
+    background-color: #007868;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.action-btn:hover {
+    transform: scale(1.05);
+}
+
+.action-btn:active {
+    transform: scale(0.95);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s ease;
+}
+
+.dropdown-menu.open {
+   
+    height: auto;
+}
+/* CSS-Stil für das Dropdown-Menü */
+
+
+/* CSS-Stil für den Text im Dropdown-Menü */
+.dropdown-menu a {
+    color: #333; /* Standardfarbe des Textes */
+    text-decoration: none; /* Entfernt Unterstreichungen */
+}
+
+/* CSS-Stil für den Text im Dropdown-Menü, wenn es angezeigt wird */
+.dropdown-menu.open a {
+    color: #ffffff; /* Ändere die Farbe des Textes, wenn das Menü sichtbar ist */
+}
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .action-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section#hero {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    z-index: 1; /* Stellen Sie sicher, dass der Text über dem Overlay liegt */
+    position: relative; /* Damit die z-index-Eigenschaft funktioniert */
+}
+.highlight-text h1 {
+    background-color: #aaaaaa; /* Grauer Hintergrund */
+    padding: 0.2em 0.5em; /* Etwas Abstand um den Text */
+    border-radius: 5px; /* Abgerundete Ecken */
+    text-align: left;
+}
+
+.highlight-text 
+
+#hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+#hero h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;  
+    text-align: left; 
+}
+#hero a1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+
+}
+
+#hero b{
+    font-size: 15px;
+    margin-bottom: 10px;
+    
+
+}
+
+
+.toggle-btn i {
+    position: relative;
+    z-index: 1; /* Stellen Sie sicher, dass das Symbol über dem Overlay liegt */
+}
+
+.toggle-btn {
+    z-index: 2; /* Stellen Sie sicher, dass der Toggle-Button über dem Overlay liegt */
+}
+
+  
+
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action-btn {
+        display: none;
+    }
+    .navbar .toggle-btn {
+        display: block;
+    }
+    .dropdown-menu {
+        right: 0;
+        top: 60px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown-menu {
+        left: 2rem;
+        width: unset;
+        display: none;
+    }
+}

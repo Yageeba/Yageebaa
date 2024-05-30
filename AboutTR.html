@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="About.css">
+    <link rel="stylesheet" href="About.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>About</title>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">Yageeba</a>
+        </div>
+        <!-- Sprachauswahl Links -->
+        <div class="language-links">
+            <a href="About.html">DE</a>
+            <a href="AboutEN.html">/EN</a>
+            <a href="AboutTR.html">/TR</a>
+            <!-- Weitere Sprachen hinzufügen -->
+        </div>
+        <ul class="links">
+            <p><a href="Seite TR.html">EV</a></p>
+            <p><a href="AboutTR.html">Hakkında</a></p>
+            <p><a href="Service TR.html">Hizmetler</a></p>
+        </ul>
+        <div class="overlay"></div> 
+        <div class="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<p><img src="AbotBild.jpg" class="MittelBild"></p>  
+<p><img src="BildHalt.jpg" class="MittelunterBild"></p>
+
+<h2 class="Titel">Dijital ufku birlikte genişletmek!</h2>
+<br/>
+   
+<p class="TITELTEXT">
+    Teknoloji dünyasını keşfedin ve internetin sunduğu sayısız fırsatlardan faydalanın. İlk kez  <br/>
+    bilgisayar kullananlar için ya da becerilerinizi geliştirmek isteyenler için bu web sitesi  <br/>
+    sizin için burada. Çünkü dijitalleşen dünyada, yeni bir şeyler öğrenmek ve internetin   <br/>
+    sonsuz fırsatlarından yararlanmak için asla geç değil.
+    
+</p>
+
+<h3 class="Titel2"> Platformumuzun Tanıtımı</h3>
+
+<p class="UnterTitelText">
+    Instagram hesabı oluşturma ve cep telefonundan dizüstü bilgisayara fotoğraf kablosuz aktarma gibi birçok ücretsiz kılavuz ve eğitim içeriği sunan yeni platformumuzu sizlere sunmaktan mutluluk duyuyoruz. Müşterilerimizin refahı bizim için önemli olduğundan, hiçbir ücret talep etmeden yüksek kaliteli hizmetler sunmayı hedefliyoruz. Reklamsız platformumuzda, öğrenme ve keşfetmenin kolay ve erişilebilir olduğu rahat ve kullanıcı dostu bir ortam oluşturmak istiyoruz.
+</p>
+
+<h3 class="Titel3"> Yaş Tavsiyesi
+</h3>
+
+<p class="UnterTitelText2">
+    Platformumuz her yaştan insan, özellikle yaşlı yetişkinler, sekiz yaşına kadar genç çocuklar ve internet, bilgisayarlar veya mobil cihazlarla ilgili temel bilgilere ihtiyaç duyan deneyimsiz kişiler için tasarlanmıştır. Herkesin farklı ihtiyaçları ve gereksinimleri olduğunu anlıyoruz, bu nedenle platformumuzun sizi en iyi şekilde desteklemek için geniş bir kılavuz ve eğitim içeriği yelpazesi sunmasını sağlamak istiyoruz.
+</p>
+
+<h3 class="Titel4">   Geri Bildirimleriniz Memnuniyetle Karşılanır</h3>
+
+<p class="UnterTitelText3">
+  Görüşleriniz Bizim İçin Önemli
+    Web sitemizdeki "Hizmetler" bölümünü ziyaret ederek ücretsiz kılavuzlara ve hizmetlere erişim sağlayabilirsiniz. Şu anda sunmadığımız ek kılavuzlara ihtiyacınız olursa, lütfen bize ulaşın, gereksinimlerinizi karşılamak için elimizden geleni yapacağız. Görüş ve önerilere her zaman açığız, çünkü sizin girdileriniz bizim için önemlidir. Tekliflerinizi ve önerilerinizi sürekli olarak geliştirmek ve genişletmek için açığız.
+</p>
+
+<script>
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const toggleBtnIcon = document.querySelector('.toggle-btn i'); 
+    const dropDownMenu = document.querySelector('.dropdown-menu'); 
+
+    toggleBtn.addEventListener('click', function() {
+        dropDownMenu.classList.toggle('open');
+        const isOpen = dropDownMenu.classList.contains('open');
+
+        toggleBtnIcon.className = isOpen
+            ? 'fas fa-times'
+            : 'fas fa-bars';
+    });
+</script>
+</body>
+<footer class="footer-container">
+    <div class="footer-links">
+        <a href="Seite TR.html">Home</a>
+        <a href="AboutTR.html">About</a>
+        <a href="Service TR.html">Services</a>
+       
+    </div>
+    <div class="footer-info">
+        <p>All rights reserved. Developed by Beray</p>
+        <p><i class="far fa-envelope"></i> Email: example@example.com</p>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="About.css">
+
+
+    <title>About</title>
+</head>
+
+<STyle>
+    #myPDF{
+        width: 90%;
+        height: 90%;
+       position: relative;
+       margin-left: 75px;}
+
+       .language-links{
+text-align: left;
+margin-left: -1100px;
+}
+
+    
+    
+</STyle>
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">Yageeba</a>
+        </div>
+        <div class="language-links">
+            <a href="Seite.html">DE</a>
+            <a href="#">/EN</a>
+            <a href="#">/TR</a>
+            <!-- Weitere Sprachen hinzufügen -->
+        </div>
+        <ul class="links">
+            <p><a href="Seite.html">Home</a></p>
+            <p><a href="about.html">About</a></p>
+            <p><a href="Service O.html">Services</a></p>
+      
+        </ul>
+       
+        <div class="overlay"></div> 
+        <div class="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <ul class="dropdown-menu">
+        <li><a href="Seite.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Service O.html">Services</a></li>
+    
+        <li><a href="#" class="action-btn">Get Started</a></li>
+    </ul>
+</header>
+<body>
+<iframe id="myPDF" src="Journal Herbst.pdf"  frameborder ="0"></iframe>
+</body>
+<script>
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const toggleBtnIcon = document.querySelector('.toggle-btn i'); 
+    const dropDownMenu = document.querySelector('.dropdown-menu'); 
+
+    toggleBtn.addEventListener('click', function() {
+        dropDownMenu.classList.toggle('open');
+        const isOpen = dropDownMenu.classList.contains('open');
+
+        toggleBtnIcon.className = isOpen
+            ? 'fas fa-times'
+            : 'fas fa-bars';
+    });
+</script>
+</body>
+<footer class="footer-container">
+    <div class="footer-links">
+        <a href="Seite.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="Service O.html">Services</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+    <div class="footer-info">
+        <p>All rights reserved. Developed by Beray</p>
+        <p><i class="far fa-envelope"></i> Email: example@example.com</p>
+    </div>
+</footer>
+
+</html>

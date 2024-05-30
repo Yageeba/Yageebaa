@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Seite.css">
+    <link rel="stylesheet" href="Contact.html">
+    <title>DemoVersionBerra</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">Yageeba</a>
+            </div>
+            <div class="language-links">
+                <a href="Seite.html">DE</a>
+                <a href="SeiteEN.html">/EN</a>
+                <a href="Seite TR.html">/TR</a>
+                <!-- Weitere Sprachen hinzufügen -->
+            </div>
+            <ul class="links">
+                <p><a href="SeiteEN.html">Home</a></p>
+                <p><a href="AboutEN.html">About</a></p>
+                <p><a href="ServiceEN.html">Services</a></p>
+              
+            </ul>
+   
+            <div class="overlay"></div> 
+            <div class="toggle-btn">
+                <i class="fas fa-bars"></i><style>.toggle-btn i {
+                    font-size: 20px;
+                    position: absolute;} </style> 
+                
+            </div>
+        </div>
+        <ul class="dropdown-menu">
+            <li><a href="SeiteEN.html">Home</a></li>
+            <li><a href="AboutEN.html">About</a></li>
+            <li><a href="ServiceEN.html">Services</a></li>
+         
+            <li><a href="#" class="action-btn">Get Started</a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="hero" class="highlight-text">
+           
+             <h2>WHEN DID IT BECOME SO  </h2>
+             <h1>TIMECONSUMING TO INFORM YOURSELF ?</h1>
+             <br/>
+             <a1>The place for everyone 
+            </a1>
+        </section>
+    </main>
+  
+    
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const toggleBtnIcon = document.querySelector('.toggle-btn i'); 
+        const dropDownMenu = document.querySelector('.dropdown-menu'); 
+    
+        toggleBtn.addEventListener('click', function() {
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
+    
+            toggleBtnIcon.className = isOpen
+                ? 'fas fa-times'
+                : 'fas fa-bars';
+        });
+    </script>
+    <!-- Neues Overlay für das Bild -->
+    <div class="overlay-image"></div> 
+</body>
+</html>

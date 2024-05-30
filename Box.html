@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sprachoptionen</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  #container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #square {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+</head>
+<body>
+<div id="container">
+  <div id="square">
+    <h2>Sprachoptionen / Dil Seçenekleri / Language Options</h2>
+  </div>
+  <button onclick="selectLanguage('english')">English</button>
+  <button onclick="selectLanguage('turkish')">Türkçe</button>
+  <button onclick="selectLanguage('german')">Deutsch</button>
+  <p id="message"></p>
+</div>
+
+<script>
+  function selectLanguage(language) {
+    document.getElementById('message').innerHTML = "Bitte wählen Sie nur eine Sprache / Lütfen sadece bir dil seçiniz / Please choose only one language.";
+    document.getElementById('square').style.backgroundColor = 'lightgray';
+    document.querySelectorAll('button').forEach(button => {
+      button.disabled = true;
+    });
+
+    if (language === 'english') {
+      setTimeout(function() {
+        window.location.href = "SeiteEN.html";
+      }, 2000); // 2 seconds delay
+    } else if (language === 'turkish') {
+      setTimeout(function() {
+        window.location.href = "Seite TR.html";
+      }, 2000); // 2 seconds delay
+    } else if (language === 'german') {
+      setTimeout(function() {
+        window.location.href = "Seite.html";
+      }, 2000); // 2 seconds delay
+    }
+  }
+</script>
+</body>
+</html>

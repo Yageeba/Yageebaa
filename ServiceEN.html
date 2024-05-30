@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+            <link rel="stylesheet" href="Service O.css">
+         
+            <title>DemoVersionBerra</title>
+        </head>
+        <body>
+            <header>
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="#">Yageeba</a>
+                    </div>
+                    <div class="language-links">
+                        <a href="Service O.html">DE</a>
+                        <a href="ServiceEN.html">/EN</a>
+                        <a href="Service TR.html"> /TR</a>
+                        <!-- Weitere Sprachen hinzufügen -->
+                    </div>
+                    <ul class="links">
+                        <p><a href="Seite.html">Home</a></p>
+                        <p><a href="about.html">Über</a></p>
+                        <p><a href="Service O.html">Services</a></p>
+                      
+                    </ul>
+           
+                    <div class="overlay"></div> 
+                    <div class="toggle-btn">
+                        <i class="fas fa-bars"></i><style>.toggle-btn i {
+                            font-size: 20px;
+                            position: absolute;} </style> 
+                        
+                    </div>
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="Seite.html">Home</a></li>
+                    <li><a href="about.html">Über</a></li>
+                    <li><a href="Service O.html">Services</a></li>
+                 
+                    <li><a href="#" class="action-btn">Get Started</a></li>
+                </ul>
+            </header>
+           
+               <!-- Kategorienbuttons -->
+    <div id="category-buttons">
+        <button class="category-btn active" data-category="all">Alles</button>
+        <button class="category-btn" data-category="E-Mail">E-Mail</button>
+        <button class="category-btn" data-category="Netzwerke">Journale</button>
+    </div>
+
+    <!-- Liste von Elementen -->
+    <ul id="item-list">
+
+       
+        <li class="Netzwerke">Titel:Journal Galathea</p>Kategorie:Soziale Journale<p>Zeit:10min</p><p>Description: Click here for PDF<a href="Journal 1.html">click here</a></p><br></li>
+        <li class="Netzwerke">Titel:Journal Rotorange</p>Kategorie:Soziale Journale<p>Zeit:10min</p><p>Description: Click here for PDF <a href="Jounal 2.html">click here</a></p><br></li>
+        <li class="Netzwerke">Titel:Journal Herbst</p>Kategorie:Soziale Journale<p>Zeit:10min</p><p>Description: Click here for PDF<a href="Journal 3.html">click here</a></p><br></li>
+        <li class="Netzwerke">Titel:Journal Blau</p>Kategorie:Soziale Journale<p>Zeit:10min</p><p>Description: Click here for PDF <a href="Journal 4.html">click here</a></p><br></li>
+      
+
+        <li class="E-Mail"><p>Title: General Information about Social Networks </p><p>Category: Social Networks</p><p>Time: 10 minutes </p><p>Description: Click here for PDF <a href="Erklärung1EN.html">click here</a></p><br></p></li>
+        <li class="E-Mail"><p>Title: General Terms  </p><p>Category: Social Networks</p><p>Time: 10 minutes</p><p>Description: Click here for PDF<a href="Erklärung2EN.html">click here</a></p><br></p></li>
+        <li class="E-Mail"><p>Title: Internet Security </p><p>Category: Social Networks</p><p>Time: 10 minutes</p><p>Description: Click here for PDF<a href="Erklärung3EN.html">click here</a></p><br></p></li>
+       
+        
+    </ul>
+    
+
+    <script>
+        // Ereignislistener für Kategorienbuttons
+        document.querySelectorAll('.category-btn').forEach(function(button) {
+            button.addEventListener('click', function() {
+                // Entferne die 'active' Klasse von allen Buttons
+                document.querySelectorAll('.category-btn').forEach(function(btn) {
+                    btn.classList.remove('active');
+                });
+                // Füge 'active' Klasse zum angeklickten Button hinzu
+                this.classList.add('active');
+                // Filtere die Elemente entsprechend der ausgewählten Kategorie
+                var category = this.getAttribute('data-category');
+                filterItems(category);
+            });
+        });
+
+        // Filterfunktion für die Elemente
+        function filterItems(category) {
+            var items = document.querySelectorAll('#item-list li');
+            items.forEach(function(item) {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.classList.add('show');
+                } else {
+                    item.classList.remove('show');
+                }
+            });
+        }
+
+        // Filter beim Laden der Seite auslösen, um alle Elemente anzuzeigen
+        filterItems('all');
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const toggleBtnIcon = document.querySelector('.toggle-btn i'); 
+        const dropDownMenu = document.querySelector('.dropdown-menu'); 
+    
+        toggleBtn.addEventListener('click', function() {
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
+    
+            toggleBtnIcon.className = isOpen
+                ? 'fas fa-times'
+                : 'fas fa-bars';
+        });
+    </script>
+  
+</body>
+    <style>
+        /* Stil für die Kategorienbuttons */
+        #category-buttons {
+            margin-bottom: 20px;
+        }
+        #category-buttons button {
+            border: 2px solid #007868;
+    padding: 1em 2.2em;
+    border-radius: 3em;
+    background-color: transparent;
+    color: #17967D;
+    cursor: pointer;
+    margin-left: 10px;
+     margin-top: 60px;
+            
+        }
+        #category-buttons button.active {
+           
+            background-color:#007868;
+        }
+        /* Stil für die Listenelemente */
+        #item-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        #item-list li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            display: none; /* Standardmäßig ausgeblendet */
+        }
+        #item-list li.show {
+            display: block; /* Angezeigt, wenn die Klasse 'show' hinzugefügt wird */
+        }
+    </style>
+
+<body>
+    <footer class="footer-container">
+        <div class="footer-links">
+            <a href="Seite.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Service O.html">Services</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+        <div class="footer-info">
+            <p>All rights reserved. Developed by Beray</p>
+            <p><i class="far fa-envelope"></i> Email: example@example.com</p>
+        </div>
+    </footer>
+</html>

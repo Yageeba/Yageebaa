@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #f5f8ff;
+    background-size: cover; /* Bild auf die gesamte Seite skalieren */
+    background-position: center 1%; /* Bild zentriert, aber um 1% der Höhe des Bildschirms nach unten verschoben */
+    position: relative; 
+    z-index: 3;
+
+    /* Stellen Sie sicher, dass das überlappende Element relativ zum Body positioniert wird */
+}
+.MittelBild {
+    width: 1150px;
+    height: auto;
+    position: relative;
+    margin-top: 0px; /* Um Platz für das Menü zu machen */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    z-index: 1; /* Stellen Sie sicher, dass das Bild über dem Overlay liegt */
+}
+.MittelunterBild{
+    width: 950px;
+    height: auto;
+    position: relative;
+    margin-top: -200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    z-index: 2;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Titel {
+    font-size: 2.5rem;
+    text-align: center;
+    z-index: 4; 
+    position: relative; 
+    margin-top: -450px;
+}
+.TITELTEXT{
+    font-size: 1rem;
+    text-align: center;
+    z-index: 5; 
+    position: relative; 
+    margin-top: 10px; 
+}
+
+.Titel2 {
+    font-size: 20px;
+    text-align: center;
+    z-index: 6;
+    position: relative;
+    margin-top: 20px; 
+margin-left: 120px;
+    padding: 160px;
+    text-align: left;
+}
+
+.UnterTitelText {
+    font-size: 15px;
+    text-align: center;
+    z-index: 5;
+    position: relative;
+    margin-top: -280px; 
+    margin-left: 120px;
+  margin-right: 120px;
+
+    padding: 160px;
+    text-align: left;
+}
+.footer-container {
+    background-color: #17967D; /* Grün */
+    color: #fff; /* Weißer Text */
+    padding: 120px 0; /* Innenabstand oben/unten */
+    text-align: center; 
+    transition: height 0.5s ease; 
+    max-height: 0;
+    overflow: hidden;
+}
+
+.footer-links a {
+    margin: 0 10px; /* Abstand zwischen den Links */
+    text-decoration: none; /* Entfernen der Unterstreichung */
+    color: #fff; /* Weißer Text */
+    transition: color 0.3s ease; /* Farbübergangseffekt */
+    
+}
+
+.footer-links a:hover {
+    color: black; /* Farbänderung bei Hover */
+}
+
+.footer-info {
+    margin-top: 20px; /* Abstand nach oben */
+    font-size: 14px; /* Textgröße */
+}
+
+.footer-info p {
+    margin: 5px 0; /* Abstand oben/unten */
+}
+
+.footer-info p i {
+    margin-right: 5px; /* Abstand zwischen Symbol und Text */
+}
+
+.Titel3 {
+    font-size: 20px;
+    text-align: left;
+    z-index: 6;
+    position: relative;
+    margin-top: -170px; 
+    margin-left: 120px;
+    padding: 160px;
+}
+
+.UnterTitelText2 {
+    font-size: 15px;
+    text-align: left;
+    z-index: 5;
+    position: relative;
+    margin-top: -280px; 
+    margin-left: 120px;
+    margin-right: 120px;
+  
+    padding: 160px;
+}
+
+
+.UnterTitelText3{
+    font-size: 15px;
+    text-align: center;
+    z-index: 5; 
+    position: relative; 
+    margin-top: -280px; 
+    text-align: left;
+    padding: 160px;
+    margin-left: 120px;
+  margin-right: 120px;
+
+}
+.Titel4{
+    font-size: 20px;
+    text-align: center;
+    z-index: 6; 
+    position: relative; 
+    margin-top: -170px; 
+    text-align: left;
+    padding: 160px;
+    margin-left: 120px;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-color: white; 
+    z-index: 0;
+    background-position: bottom;
+}
+.overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bild1.jpg'); 
+    background-size: cover;
+    opacity: 0.1; 
+    z-index: 2; 
+    color: #ffffff;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #aaaaaa;
+    font-size: 1rem;
+    z-index: 1; 
+    position: relative; 
+}
+a:hover {
+    color: #17967D;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+    z-index: 3; 
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007868;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 4rem;
+    font-size: 20px;
+    margin-left: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar .links {
+    display: flex;
+    gap: 4rem;
+    font-size: 20px;
+    color: #1a1313;
+}
+
+
+.navbar .toggle-btn {
+    color: #1a1313;
+    font-size: 10rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action-btn {
+    background-color: #007868;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.action-btn:hover {
+    transform: scale(1.05);
+}
+
+.action-btn:active {
+    transform: scale(0.95);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s ease;
+}
+
+.dropdown-menu.open {
+    display: block;
+    height: auto;
+}
+/* CSS-Stil für das Dropdown-Menü */
+
+
+/* CSS-Stil für den Text im Dropdown-Menü */
+.dropdown-menu a {
+    color: #333; /* Standardfarbe des Textes */
+    text-decoration: none; /* Entfernt Unterstreichungen */
+}
+
+/* CSS-Stil für den Text im Dropdown-Menü, wenn es angezeigt wird */
+.dropdown-menu.open a {
+    color: #ffffff; /* Ändere die Farbe des Textes, wenn das Menü sichtbar ist */
+}
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .action-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+section#hero {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    z-index: 1; 
+    position: relative; 
+}
+.highlight-text h1 {
+    background-color: #aaaaaa; 
+    padding: 0.2em 0.5em; 
+    border-radius: 5px; 
+    text-align: left;
+}
+.language-links{
+text-align: left;
+margin-left: -1100px;
+}
+
+.highlight-text 
+
+#hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+#hero h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;  
+    position: absolute;
+    text-align: left; 
+}
+#hero a1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+
+}
+
+#hero b{
+    font-size: 15px;
+    margin-bottom: 10px;
+    
+
+}
+.toggle-btn i {
+    position: relative;
+    z-index: 1; 
+}
+
+.toggle-btn {
+    z-index: 2; 
+}
+
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action-btn {
+        display: none;
+    }
+    .navbar .toggle-btn {
+        display: block;
+    }
+    .dropdown-menu {
+        right: 0;
+        top: 60px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown-menu {
+        left: 2rem;
+        width: unset;
+        display: none;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action-btn {
+        display: none;
+    }
+    .navbar .toggle-btn {
+        display: flex;
+    }
+    .dropdown-menu {
+        right: 0;
+        top: 60px;
+        width: 100%;
+    }
+    .MittelBild {
+        width: 1200px;
+        height: auto;
+    }
+    .overlay{
+        width: 1200px;
+    }
+    .Titel3 {
+        font-size: 20px;
+        text-align: left;
+        z-index: 6;
+        position: relative;
+        margin-top: -170px; 
+       
+        padding: 160px;
+    }
+    
+    .UnterTitelText2 {
+        font-size: 15px;
+        text-align: left;
+        z-index: 5;
+        position: relative;
+        margin-top: -280px; 
+    
+        padding-left: 160px;
+        padding-right: 160px;
+    }
+    
+    
+    .UnterTitelText3{
+        font-size: 15px;
+        text-align: center;
+        z-index: 5; 
+        position: relative; 
+        margin-top: -280px; 
+        text-align: left;
+        padding: 160px;
+        
+    
+    }
+    .Titel4{
+        font-size: 20px;
+        text-align: center;
+        z-index: 6; 
+        position: relative; 
+        margin-top: -170px; 
+        text-align: left;
+        padding: 160px;
+    }
+
+    .Titel {
+        font-size: 2.5rem;
+        text-align: center;
+        z-index: 4; 
+        position: relative; 
+       text-align:start;
+      
+        
+    }
+    .TITELTEXT{
+        font-size: 1rem;
+        text-align: center;
+        z-index: 5; 
+        position: relative; 
+        margin-top: 10px; 
+        margin-left: 50px;
+    }
+    
+    .Titel2 {
+        font-size: 20px;
+        text-align: center;
+        z-index: 6;
+        position: relative;
+        margin-top: 20px; 
+       
+        padding: -160px;
+        text-align: left;
+    }
+    
+    .UnterTitelText {
+        font-size: 15px;
+        text-align: center;
+        z-index: 5;
+        position: relative;
+        margin-top: -280px; 
+      margin-left: -200px;
+       margin-right: 200px;
+        text-align: left;
+    }
+    .footer-container {
+        background-color: #17967D; /* Grün */
+        color: #fff; /* Weißer Text */
+        padding: 120px 0; /* Innenabstand oben/unten */
+        text-align: center; 
+        transition: height 0.5s ease; 
+        max-height: 0;
+        overflow: hidden;
+        width:900px
+    }
+    
+    
+}
+
+
+/* Für Bildschirme kleiner als 576px */
+@media (max-width: 576px) {
+    .dropdown-menu {
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+    .navbar .toggle-btn {
+        right: 2rem;
+    }
+}

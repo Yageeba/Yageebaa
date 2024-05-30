@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="Gut zu wissen über soziale Netzwerke.css">
+    <link rel="stylesheet" href="About.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>About</title>
+</head>
+<body>
+    <div class="rectangle horizontal" id="horizontalRect"></div>
+    <div class="rectangle vertical" id="verticalRect"></div>
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">Yageeba</a>
+        </div>
+        <ul class="links">
+            <p><a href="Seite.html">Home</a></p>
+            <p><a href="about.html">About</a></p>
+            <p><a href="Service O.html">Services</a></p>
+      
+        </ul>
+      
+        <div class="overlay"></div> 
+        <div class="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <ul class="dropdown-menu">
+        <li><a href="Seite.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Service O.html">Services</a></li>
+    
+        <li><a href="#" class="action-btn">Get Started</a></li>
+    </ul>
+</header>
+
+<h2 class="Titel">Wichtige Informationen und Neuigkeiten</h2>
+<P>    Wer aktiv ist oder etwas für die Ernährung oder das Wohlbefinden tut Massagen gehen,ein <br/>
+    Achtsamkeitscoaching oder ein Personal Training absolvieren: SWICA unterstützt mit über <br/>
+    100 Angeboten und Kursen 100 Angeboten und Kursen aus den Zusatzversicherungen COMPLETA <br/>
+    FORTE, COMPLETA PRAEVENTA und OPTIMA so viele verschiedene
+    <br/>  Aktivitäten wie sonst kaum eine Krankenversicherung.</P>
+
+      
+
+
+<div class="overlay-mage"></div> 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var horizontalRect = document.getElementById("horizontalRect");
+    var verticalRect = document.getElementById("verticalRect");
+
+    // Setze die Startpositionen der Rechtecke außerhalb des sichtbaren Bereichs
+    horizontalRect.style.transform = "translateY(100vh)";
+    verticalRect.style.transform = "translateY(100vh)";
+
+    // Füge eine verzögerte Animation hinzu, um die Rechtecke von unten nach oben zu bewegen
+    setTimeout(function() {
+        horizontalRect.style.transition = "transform 1s ease";
+        verticalRect.style.transition = "transform 1s ease";
+
+        horizontalRect.style.transform = "translateY(0)";
+        verticalRect.style.transform = "translateY(0)";
+    }, 500); // Verzögere die Animation um 0,5 Sekunden
+});
+
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const toggleBtnIcon = document.querySelector('.toggle-btn i'); 
+    const dropDownMenu = document.querySelector('.dropdown-menu'); 
+
+    toggleBtn.addEventListener('click', function() {
+        dropDownMenu.classList.toggle('open');
+        const isOpen = dropDownMenu.classList.contains('open');
+
+        toggleBtnIcon.className = isOpen
+            ? 'fas fa-times'
+            : 'fas fa-bars';
+    });
+    
+</script>
+</body>
+
+
+</html>
